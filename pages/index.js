@@ -202,7 +202,8 @@ export default function Home() {
           
         }
         .tondroid-img {
-          
+          transform: scale(0.5);
+          transition: transform 0.3 ease;
           position: fixed;
           transition: opacity 0.3s ease;
           animation: floatUpDown 2s infinite ease-in-out;
