@@ -226,13 +226,13 @@ export default function Home() {
 
   @keyframes floatUpDown {
     0% {
-      transform: translateY(-5vh);
+      transform: translateY(-9vh);
     }
     50% {
-      transform: translateY(-6vh);
+      transform: translateY(-10vh);
     }
     100% {
-      transform: translateY(-5vh);
+      transform: translateY(-9vh);
     }
   }
 
