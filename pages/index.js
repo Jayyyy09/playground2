@@ -254,8 +254,6 @@ export default function Home() {
       font-size: 2vw;
       .tondroid-img {
         width: 30vw;
-      }
-  }
     }
     .bar {
       height: 4vh;
