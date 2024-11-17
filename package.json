@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "reset": "json -I -f package.json -e 'this.dependencies[\"@xw3/maki\"]=\"*\"' -e 'this.dependencies[\"@xw3/maki-quest-hooks\"]=\"*\"' && yarn ",
-    "deps": "yarn add @xw3/maki @xw3/maki-quest-hooks"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "reset": "json -I -f package.json -e 'this.dependencies[\"@xw3/maki\"]=\"*\"' -e 'this.dependencies[\"@xw3/maki-quest-hooks\"]=\"*\"' && yarn && yarn dev",
+  "deps": "yarn add @xw3/maki @xw3/maki-quest-hooks && yarn dev"
+}
+
   "dependencies": {
     "@chakra-ui/react": "2.8.2",
     "@emotion/react": "^11.13.3",
