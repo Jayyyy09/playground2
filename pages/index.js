@@ -254,7 +254,8 @@ export default function Home() {
       font-size: 2vw;
       .tondroid-img {
         width: 30vw;
-    }}}
+    }
+    }
     .bar {
       height: 4vh;
     }
@@ -278,6 +279,7 @@ export default function Home() {
     button {
       font-size: 1rem;
       padding: 5px 10px;
+    }
     }
 `}</style>
     </AppLayout>
