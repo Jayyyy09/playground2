@@ -212,6 +212,8 @@ export default function Home() {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 300px; /* Adjust this value to make the image smaller */
+    height: 300px;
   }
 
   .tondroid-img {
