@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </div>
 
-      <style jsx>{'
+      <style jsx>{`
   .game-container {
     display: flex;
     flex-direction: column;
@@ -121,31 +121,26 @@ export default function Home() {
     padding: 20px;
     background-color: #a6d3f5;
   }
-
   .top-section,
   .middle-section,
   .bottom-section {
     width: 100%;
   }
-
   .top-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-
   .middle-section {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .circle-bar-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
-
   .circle {
     width: 15vw;
     height: 15vw;
@@ -159,7 +154,6 @@ export default function Home() {
     color: white;
     font-size: 3vw;
   }
-
   .bond {
     background-color: #f00;
   }
@@ -169,20 +163,17 @@ export default function Home() {
   .cleanliness {
     background-color: #00f;
   }
-
   .bar-label-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
   }
-
   .bar {
     height: 5vh;
     margin-bottom: 5px;
     max-height: 50px;
   }
-
   .bond-bar {
     background-color: #c00;
   }
@@ -192,18 +183,15 @@ export default function Home() {
   .cleanliness-bar {
     background-color: #00c;
   }
-
   .label {
     color: white;
     font-size: 1.2rem;
     text-align: left;
   }
-
   .bottom-section {
     display: flex;
     justify-content: center;
   }
-
   .tondroid {
     position: absolute;
     top: 50%;
@@ -212,18 +200,17 @@ export default function Home() {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 300px; /* Adjust this value to make the image smaller */
+    height: 300px;
   }
-
   .tondroid-img {
     position: absolute;
     transition: opacity 0.3s ease;
     animation: floatUpDown 2s infinite ease-in-out;
   }
-
   .tondroid-img.active {
     opacity: 1;
   }
-
   @keyframes floatUpDown {
     0% {
       transform: translateY(-9vh);
@@ -235,7 +222,6 @@ export default function Home() {
       transform: translateY(-9vh);
     }
   }
-
   .button-box {
     background-color: #333;
     padding: 5vw;
@@ -246,7 +232,6 @@ export default function Home() {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   button {
     padding: 10px 20px;
     font-size: 2rem;
@@ -257,11 +242,9 @@ export default function Home() {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-
   button:hover {
     background-color: #777;
   }
-
   /* Responsive design */
   @media (max-width: 768px) {
     .circle {
@@ -269,55 +252,32 @@ export default function Home() {
       height: 12vw;
       font-size: 2vw;
     }
-
     .bar {
       height: 4vh;
     }
-
     button {
       font-size: 1.5rem;
       padding: 8px 16px;
     }
   }
-
   @media (max-width: 480px) {
     .circle {
       width: 10vw;
       height: 10vw;
       font-size: 1.5rem;
     }
-
     .bar {
       height: 3vh;
     }
-
     .button-box {
       gap: 3vw;
     }
-
     button {
       font-size: 1rem;
       padding: 5px 10px;
     }
   }
-'}</style>
+`}</style>
     </AppLayout>
   );
 }
-/*export default function Home() {
-  //const { username } = useCurrentChatData()
-  const user = useUser()
-  const wallet = useWallet()
-
-  return (
-    <AppLayout>
-      <Heading>Home</Heading>
-        
-
-
-
-
-
-    </AppLayout>
-  )
-}*/
