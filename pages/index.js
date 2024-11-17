@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </div>
 
-      <style jsx>{
+      <style jsx>{'
   .game-container {
     display: flex;
     flex-direction: column;
@@ -300,7 +300,7 @@ export default function Home() {
       padding: 5px 10px;
     }
   }
-}</style>
+'}</style>
     </AppLayout>
   );
 }
