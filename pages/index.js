@@ -118,7 +118,6 @@ export default function Home() {
           align-items: center;
           justify-content: space-between;
           height: 80vh;
-          width: 50vh;
           padding: 20px;
           background-color: #A6D3F5;
         }
@@ -243,6 +242,7 @@ export default function Home() {
           border-radius: 50px;
           cursor: pointer;
           transition: background-color 0.3s;
+          display: flex;
         }
         button:hover {
           background-color: #777;
