@@ -52,50 +52,50 @@ export default function Home() {
   }, [bondWidth, energyWidth, cleanlinessWidth]);
 
   return (
-    <AppLayout>
+<AppLayout>
       <Heading>Home</Heading>
       <div className="game-container">
         {/* Top section with three bars and three circles */}
         <div className="top-section">
           <div className="circle-bar-container">
             <div className="circle bond"></div>
-            <div className="bar bond-bar" style={{ width: '${bondWidth}px' }}></div>
-            
+            <div className="bar bond-bar" style={{ width: `${bondWidth}px` }}></div>
+
           </div>
           <div className="circle-bar-container">
             <div className="circle energy"></div>
-            <div className="bar energy-bar" style={{ width: '${energyWidth}px' }}></div>
+            <div className="bar energy-bar" style={{ width: `${energyWidth}px` }}></div>
           </div>
-                       
+
 
           <div className="circle-bar-container">
             <div className="circle cleanliness"></div>
-            <div className="bar cleanliness-bar" style={{ width: '${cleanlinessWidth}px' }}></div>
+            <div className="bar cleanliness-bar" style={{ width: `${cleanlinessWidth}px` }}></div>
 
           </div>
         <div className="middle-section">
             <img
               src="/images/tondroid-neutral.png"
               alt="TONDroid Neutral"
-              className={tondroid-img ${tondroidState === "neutral" ? "active" : ""}}
+              className={`tondroid-img ${tondroidState === "neutral" ? "active" : ""}`}
               style={{ opacity: tondroidState === "neutral" ? 1 : 0 }}
             />
             <img
               src="/images/tondroid-drained.png"
               alt="TONDroid Drained"
-              className={tondroid-img ${tondroidState === "drained" ? "active" : ""}}
+              className={`tondroid-img ${tondroidState === "drained" ? "active" : ""}`}
               style={{ opacity: tondroidState === "drained" ? 1 : 0 }}
             />
             <img
               src="/images/tondroid-energized.png"
               alt="TONDroid Energized"
-              className={tondroid-img ${tondroidState === "energized" ? "active" : ""}}
+              className={`tondroid-img ${tondroidState === "energized" ? "active" : ""}`}
               style={{ opacity: tondroidState === "energized" ? 1 : 0 }}
             />
             <img
               src="/images/tondroid-dirty.png"
               alt="TONDroid Dirty"
-              className={tondroid-img ${tondroidState === "dirty" ? "active" : ""}}
+              className={`tondroid-img ${tondroidState === "dirty" ? "active" : ""}`}
               style={{ opacity: tondroidState === "dirty" ? 1 : 0 }}
             />
           </div>
