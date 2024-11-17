@@ -189,9 +189,9 @@ export default function Home() {
     }
 
     @keyframes floatUpDown {
-      0% { transform: translateY(-9vh); }
-      50% { transform: translateY(-10vh); }
-      100% { transform: translateY(-9vh); }
+      0% { transform: translateY(-30vh); }
+      50% { transform: translateY(-35vh); }
+      100% { transform: translateY(-30vh); }
     }
 
     .bottom-section {
