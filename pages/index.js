@@ -1,4 +1,4 @@
-import { AppLayout } from "@/layouts/AppLayout"
+yyimport { AppLayout } from "@/layouts/AppLayout"
 import { Heading, VStack } from "@chakra-ui/react"
 import { useState, useEffect } from "react";
 
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="top-section">
           <div className="circle-bar-container">
             <div className="circle bond"></div>
-            <div className="bar bond-bar" style={{ width: ${bondWidth}px }}></div>
+            <div className="bar bond-bar" style={{ width: $'{bondWidth}'px }}></div>
             
           </div>
           <div className="circle-bar-container">
