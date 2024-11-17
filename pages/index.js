@@ -29,7 +29,7 @@ export default function Home() {
   // Function to change the TONDroid state based on certain conditions
   const checkBarStates = () => {
     if (bondWidth < 30) setTondroidState("drained");
-    if (energyWidth < 30) setTondroidState("energized");
+    else if (energyWidth < 30) setTondroidState("energized");
     if (cleanlinessWidth < 30) setTondroidState("dirty");
     else setTondroidState("neutral");
   };
