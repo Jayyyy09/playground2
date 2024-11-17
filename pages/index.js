@@ -192,10 +192,10 @@ export default function Home() {
 
         .tondroid {
 
-          position: absolute;
+          position: fixed;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-70%, -70%);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -203,7 +203,7 @@ export default function Home() {
         }
         .tondroid-img {
           
-          position: absolute;
+          position: fixed;
           transition: opacity 0.3s ease;
           animation: floatUpDown 2s infinite ease-in-out;
         }
