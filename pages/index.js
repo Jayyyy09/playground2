@@ -118,6 +118,7 @@ export default function Home() {
           align-items: center;
           justify-content: space-between;
           height: 80vh;
+          width: 50vh;
           padding: 20px;
           background-color: #A6D3F5;
         }
