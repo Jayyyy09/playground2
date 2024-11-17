@@ -56,7 +56,6 @@ export default function Home() {
   <Heading>Home</Heading>
 
   <div className="game-container">
-
     {/* Top section with three bars and three circles */}
     <div className="top-section">
       <div className="circle-bar-container">
@@ -113,8 +112,8 @@ export default function Home() {
     </div>
   </div>
 
+  {/* Styling */}
   <style jsx>{`
-
     .game-container {
       display: flex;
       flex-direction: column;
@@ -266,5 +265,6 @@ export default function Home() {
     }
   `}</style>
 </AppLayout>
+
 
 
