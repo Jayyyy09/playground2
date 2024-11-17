@@ -72,14 +72,13 @@ export default function Home() {
             <div className="circle cleanliness"></div>
             <div className="bar cleanliness-bar" style={{ width: `${cleanlinessWidth}px` }}></div>
 
-          </div>
-        <div className="middle-section">
-            <img
-              src="/images/tondroid-neutral.png"
-              alt="TONDroid Neutral"
-              className={`tondroid-img ${tondroidState === "neutral" ? "active" : ""}`}
-              style={{ opacity: tondroidState === "neutral" ? 1 : 0 }}
-            />
+            <div className="middle-section">
+              <img
+                src="/images/tondroid-neutral.png"
+                alt="TONDroid Neutral"
+                className={`tondroid-img ${tondroidState === "neutral" ? "active" : ""}`}
+                style={{ opacity: tondroidState === "neutral" ? 1 : 0 }}
+              />
             <img
               src="/images/tondroid-drained.png"
               alt="TONDroid Drained"
@@ -207,6 +206,8 @@ export default function Home() {
     position: absolute;
     transition: opacity 0.3s ease;
     animation: floatUpDown 2s infinite ease-in-out;
+    width: 20vw;
+    height-auto;
   }
   .tondroid-img.active {
     opacity: 1;
@@ -251,6 +252,10 @@ export default function Home() {
       width: 12vw;
       height: 12vw;
       font-size: 2vw;
+      .tondroid-img {
+        width: 30vw;
+      }
+  
     }
     .bar {
       height: 4vh;
