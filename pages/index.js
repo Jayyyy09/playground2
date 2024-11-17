@@ -279,6 +279,5 @@ export default function Home() {
       font-size: 1rem;
       padding: 5px 10px;
     }
-  }
 `}</style>
     </AppLayout>
