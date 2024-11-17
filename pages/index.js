@@ -12,7 +12,7 @@ export default function Home() {
 
   // Function to handle button clicks
   const handleButtonClick = (action) => {
-    console.log(${action} button clicked);
+    console.log('${action} button clicked');
     
     // Increase the corresponding bar width without exceeding max width
     if (action === "Action 1" && bondWidth < maxWidth) {
