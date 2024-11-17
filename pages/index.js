@@ -53,455 +53,217 @@ export default function Home() {
 
   return (
 <AppLayout>
+  <Heading>Home</Heading>
+
+  <div className="game-container">
+
+    {/* Top section with three bars and three circles */}
+    <div className="top-section">
+      <div className="circle-bar-container">
+        <div className="circle bond"></div>
+        <div className="bar bond-bar" style={{ width: `${bondWidth}px` }}></div>
+      </div>
+
+      <div className="circle-bar-container">
+        <div className="circle energy"></div>
+        <div className="bar energy-bar" style={{ width: `${energyWidth}px` }}></div>
+      </div>
+
+      <div className="circle-bar-container">
+        <div className="circle cleanliness"></div>
+        <div className="bar cleanliness-bar" style={{ width: `${cleanlinessWidth}px` }}></div>
+      </div>
+    </div>
+
+    {/* Middle section with TONDroid images */}
+    <div className="middle-section">
+      <img
+        src="/images/tondroid-neutral.png"
+        alt="TONDroid Neutral"
+        className={`tondroid-img ${tondroidState === "neutral" ? "active" : ""}`}
+        style={{ opacity: tondroidState === "neutral" ? 1 : 0 }}
+      />
+      <img
+        src="/images/tondroid-drained.png"
+        alt="TONDroid Drained"
+        className={`tondroid-img ${tondroidState === "drained" ? "active" : ""}`}
+        style={{ opacity: tondroidState === "drained" ? 1 : 0 }}
+      />
+      <img
+        src="/images/tondroid-energized.png"
+        alt="TONDroid Energized"
+        className={`tondroid-img ${tondroidState === "energized" ? "active" : ""}`}
+        style={{ opacity: tondroidState === "energized" ? 1 : 0 }}
+      />
+      <img
+        src="/images/tondroid-dirty.png"
+        alt="TONDroid Dirty"
+        className={`tondroid-img ${tondroidState === "dirty" ? "active" : ""}`}
+        style={{ opacity: tondroidState === "dirty" ? 1 : 0 }}
+      />
+    </div>
+
+    {/* Bottom section with three buttons */}
+    <div className="bottom-section">
+      <div className="button-box">
+        <button onClick={() => handleButtonClick("Action 1")}>Bond</button>
+        <button onClick={() => handleButtonClick("Action 2")}>Energize</button>
+        <button onClick={() => handleButtonClick("Action 3")}>Clean</button>
+      </div>
+    </div>
+  </div>
+
+  <style jsx>{`
+
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; /* Changed to space-evenly for better spacing */
+      height: 80vh;
+      padding: 20px;
+      background-color: #a6d3f5;
+    }
+
+    .top-section,
+    .middle-section,
+    .bottom-section {
+      width: 100%;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-evenly; /* Ensures items are evenly spaced */
+      margin-bottom: 20px;
+    }
+
+    .circle-bar-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centers circles and bars */
+    }
+
+    .circle {
+      width: 15vw;
+      height: 15vw;
+      max-width: 80px;
+      max-height: 80px;
+      border-radius: 50%;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3vw;
+    }
+
+    .bond { background-color: #f00; }
+    .energy { background-color: #0f0; }
+    .cleanliness { background-color: #00f; }
+
+    .bar {
+      height: 5vh;
+      margin-bottom: 5px;
+      max-height: 50px;
+      width: 100%; /* Ensures bars stretch to fill container */
+    }
+
+    .bond-bar { background-color: #c00; }
+    .energy-bar { background-color: #0c0; }
+    .cleanliness-bar { background-color: #00c; }
+
+    .middle-section {
+      display: flex;
+      justify-content: center; /* Centers the TONDroid images */
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tondroid-img {
+      position: absolute;
+      transition: opacity 0.3s ease;
+      animation: floatUpDown 2s infinite ease-in-out;
+    }
+
+    .tondroid-img.active {
+      opacity: 1;
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(-9vh); }
+      50% { transform: translateY(-10vh); }
+      100% { transform: translateY(-9vh); }
+    }
+
+    .bottom-section {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button-box {
+      background-color: #333;
+      padding: 5vw;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      gap: 5vw;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 2rem;
+      color: white;
+      background-color: #555;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #777;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .circle {
+        width: 12vw;
+        height: 12vw;
+        font-size: 2vw;
+      }
+
+      .bar {
+        height: 4vh;
+      }
+
+      button {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .circle {
+        width: 10vw;
+        height: 10vw;
+        font-size: 1.5rem;
+      }
+
+      .bar {
+        height: 3vh;
+      }
+
+      .button-box {
+        gap: 3vw;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
+    }
+  `}</style>
+</AppLayout>
 
-      <Heading>Home</Heading>
-
-      <div className="game-container">
-
-        {/* Top section with three bars and three circles */}
-
-        <div className="top-section">
-
-          <div className="circle-bar-container">
-
-            <div className="circle bond"></div>
-
-            <div className="bar bond-bar" style={{ width: `${bondWidth}px` }}></div>
-
-
-
-          </div>
-
-          <div className="circle-bar-container">
-
-            <div className="circle energy"></div>
-
-            <div className="bar energy-bar" style={{ width: `${energyWidth}px` }}></div>
-
-          </div>
-
-
-
-
-
-          <div className="circle-bar-container">
-
-            <div className="circle cleanliness"></div>
-
-            <div className="bar cleanliness-bar" style={{ width: `${cleanlinessWidth}px` }}></div>
-
-
-
-          </div>
-
-        <div className="middle-section">
-
-            <img
-
-              src="/images/tondroid-neutral.png"
-
-              alt="TONDroid Neutral"
-
-              className={`tondroid-img ${tondroidState === "neutral" ? "active" : ""}`}
-
-              style={{ opacity: tondroidState === "neutral" ? 1 : 0 }}
-
-            />
-
-            <img
-
-              src="/images/tondroid-drained.png"
-
-              alt="TONDroid Drained"
-
-              className={`tondroid-img ${tondroidState === "drained" ? "active" : ""}`}
-
-              style={{ opacity: tondroidState === "drained" ? 1 : 0 }}
-
-            />
-
-            <img
-
-              src="/images/tondroid-energized.png"
-
-              alt="TONDroid Energized"
-
-              className={`tondroid-img ${tondroidState === "energized" ? "active" : ""}`}
-
-              style={{ opacity: tondroidState === "energized" ? 1 : 0 }}
-
-            />
-
-            <img
-
-              src="/images/tondroid-dirty.png"
-
-              alt="TONDroid Dirty"
-
-              className={`tondroid-img ${tondroidState === "dirty" ? "active" : ""}`}
-
-              style={{ opacity: tondroidState === "dirty" ? 1 : 0 }}
-
-            />
-
-          </div>
-
-        </div>
-
-
-
-        {/* Bottom section with three buttons */}
-
-        <div className="bottom-section">
-
-          <div className="button-box">
-
-            <button onClick={() => handleButtonClick("Action 1")}>Bond</button>
-
-            <button onClick={() => handleButtonClick("Action 2")}>Energize</button>
-
-            <button onClick={() => handleButtonClick("Action 3")}>Clean</button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-      <style jsx>{`
-
-  .game-container {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    height: 80vh;
-
-    padding: 20px;
-
-    background-color: #a6d3f5;
-
-  }
-
-  .top-section,
-
-  .middle-section,
-
-  .bottom-section {
-
-    width: 100%;
-
-  }
-
-  .top-section {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-  }
-
-  .middle-section {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-  .circle-bar-container {
-
-    display: flex;
-
-    align-items: center;
-
-    margin-bottom: 20px;
-
-  }
-
-  .circle {
-
-    width: 15vw;
-
-    height: 15vw;
-
-    max-width: 80px;
-
-    max-height: 80px;
-
-    border-radius: 50%;
-
-    margin-right: 10px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: white;
-
-    font-size: 3vw;
-
-  }
-
-  .bond {
-
-    background-color: #f00;
-
-  }
-
-  .energy {
-
-    background-color: #0f0;
-
-  }
-
-  .cleanliness {
-
-    background-color: #00f;
-
-  }
-
-  .bar-label-container {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    width: 100%;
-
-  }
-
-  .bar {
-
-    height: 5vh;
-
-    margin-bottom: 5px;
-
-    max-height: 50px;
-
-  }
-
-  .bond-bar {
-
-    background-color: #c00;
-
-  }
-
-  .energy-bar {
-
-    background-color: #0c0;
-
-  }
-
-  .cleanliness-bar {
-
-    background-color: #00c;
-
-  }
-
-  .label {
-
-    color: white;
-
-    font-size: 1.2rem;
-
-    text-align: left;
-
-  }
-
-  .bottom-section {
-
-    display: flex;
-
-    justify-content: center;
-
-  }
-
-  .tondroid {
-
-    position: absolute;
-
-    top: 50%;
-
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    width: 300px; /* Adjust this value to make the image smaller */
-
-    height: 300px;
-
-  }
-
-  .tondroid-img {
-
-    position: absolute;
-
-    transition: opacity 0.3s ease;
-
-    animation: floatUpDown 2s infinite ease-in-out;
-
-  }
-
-  .tondroid-img.active {
-
-    opacity: 1;
-
-  }
-
-  @keyframes floatUpDown {
-
-    0% {
-
-      transform: translateY(-9vh);
-
-    }
-
-    50% {
-
-      transform: translateY(-10vh);
-
-    }
-
-    100% {
-
-      transform: translateY(-9vh);
-
-    }
-
-  }
-
-  .button-box {
-
-    background-color: #333;
-
-    padding: 5vw;
-
-    border-radius: 50px;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-    display: flex;
-
-    gap: 5vw;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-  }
-
-  button {
-
-    padding: 10px 20px;
-
-    font-size: 2rem;
-
-    color: white;
-
-    background-color: #555;
-
-    border: none;
-
-    border-radius: 50px;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-
-  }
-
-  button:hover {
-
-    background-color: #777;
-
-  }
-
-  /* Responsive design */
-
-  @media (max-width: 768px) {
-
-    .circle {
-
-      width: 12vw;
-
-      height: 12vw;
-
-      font-size: 2vw;
-
-    }
-
-    .bar {
-
-      height: 4vh;
-
-    }
-
-    button {
-
-      font-size: 1.5rem;
-
-      padding: 8px 16px;
-
-    }
-
-  }
-
-  @media (max-width: 480px) {
-
-    .circle {
-
-      width: 10vw;
-
-      height: 10vw;
-
-      font-size: 1.5rem;
-
-    }
-
-    .bar {
-
-      height: 3vh;
-
-    }
-
-    .button-box {
-
-      gap: 3vw;
-
-    }
-
-    button {
-
-      font-size: 1rem;
-
-      padding: 5px 10px;
-
-    }
-
-  }
-
-`}</style>
-
-    </AppLayout>
