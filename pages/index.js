@@ -212,6 +212,8 @@ export default function Home() {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 300px; /* Adjust this value to make the image smaller */
+    height: 300px;
   }
 
   .tondroid-img {
@@ -226,13 +228,13 @@ export default function Home() {
 
   @keyframes floatUpDown {
     0% {
-      transform: translateY(-5vh);
+      transform: translateY(-9vh);
     }
     50% {
-      transform: translateY(-6vh);
+      transform: translateY(-10vh);
     }
     100% {
-      transform: translateY(-5vh);
+      transform: translateY(-9vh);
     }
   }
 
