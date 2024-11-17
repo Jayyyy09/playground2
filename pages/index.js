@@ -28,9 +28,9 @@ export default function Home() {
 
   // Function to change the TONDroid state based on certain conditions
   const checkBarStates = () => {
-    if (bondWidth < 50) setTondroidState("drained");
-    if (energyWidth < 50) setTondroidState("energized");
-    if (cleanlinessWidth < 50) setTondroidState("dirty");
+    if (bondWidth < 30) setTondroidState("drained");
+    if (energyWidth < 30) setTondroidState("energized");
+    if (cleanlinessWidth < 30) setTondroidState("dirty");
     else setTondroidState("neutral");
   };
 
@@ -43,9 +43,9 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       // Decrease the width of each bar by 10px every second
-      if (bondWidth > 50) setBondWidth(bondWidth - 3);
-      if (energyWidth > 50) setEnergyWidth(energyWidth - 3);
-      if (cleanlinessWidth > 50) setCleanlinessWidth(cleanlinessWidth - 3);
+      if (bondWidth > 10) setBondWidth(bondWidth - 3);
+      if (energyWidth > 10) setEnergyWidth(energyWidth - 3);
+      if (cleanlinessWidth > 10) setCleanlinessWidth(cleanlinessWidth - 3);
     }, 1000); 
 
     return () => clearInterval(interval); // Clear the interval when the component unmounts
