@@ -218,13 +218,13 @@ export default function Home() {
 
         @keyframes floatUpDown {
           0% {
-            transform: translateY(-200px);
+            transform: translateY(-100px);
           }
           50% {
-            transform: translateY(-220px);
+            transform: translateY(-120px);
           }
           100% {
-            transform: translateY(-200px);
+            transform: translateY(-100px);
           }
         }
 
