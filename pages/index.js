@@ -255,7 +255,7 @@ export default function Home() {
       .tondroid-img {
         width: 30vw;
       }
-  
+  }
     }
     .bar {
       height: 4vh;
