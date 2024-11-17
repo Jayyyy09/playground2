@@ -1,4 +1,4 @@
-yyimport { AppLayout } from "@/layouts/AppLayout"
+import { AppLayout } from "@/layouts/AppLayout"
 import { Heading, VStack } from "@chakra-ui/react"
 import { useState, useEffect } from "react";
 
