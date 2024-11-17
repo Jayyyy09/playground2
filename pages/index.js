@@ -59,18 +59,18 @@ export default function Home() {
         <div className="top-section">
           <div className="circle-bar-container">
             <div className="circle bond"></div>
-            <div className="bar bond-bar" style={{ width: $'{bondWidth}'px }}></div>
+            <div className="bar bond-bar" style={{ width: '${bondWidth}px' }}></div>
             
           </div>
           <div className="circle-bar-container">
             <div className="circle energy"></div>
-            <div className="bar energy-bar" style={{ width: ${energyWidth}px }}></div>
+            <div className="bar energy-bar" style={{ width: '${energyWidth}px' }}></div>
           </div>
                        
 
           <div className="circle-bar-container">
             <div className="circle cleanliness"></div>
-            <div className="bar cleanliness-bar" style={{ width: ${cleanlinessWidth}px }}></div>
+            <div className="bar cleanliness-bar" style={{ width: '${cleanlinessWidth}px' }}></div>
 
           </div>
         <div className="middle-section">
